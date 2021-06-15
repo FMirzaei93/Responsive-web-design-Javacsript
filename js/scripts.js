@@ -23,11 +23,6 @@ $(document).ready(function() {
     });
 
 
-    $('button').click(function() {
-
-        alert('Sorry! nothing`s gonna happen 😅');
-    });
-
 
     //------ A small function --------
 
@@ -40,6 +35,14 @@ $(document).ready(function() {
 
         return angle;
     }
+
+    //----------------------- Clicking on sandwich button ---------------------------- 
+
+    $('button').click(function() {
+
+        if ($('body').hasClass('openmenu')) $('body').removeClass('openmenu');
+        else $('body').addClass('openmenu');
+    });
 
     // ----------------------  Media Query  -------------------------------------------
 
