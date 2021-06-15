@@ -279,6 +279,11 @@ aside>ul>li>div>span {
     transform: rotate(180deg);
 }
 
+aside>ul>li>div>span.open {
+    transition: transform 0.3s;
+    transform: rotate(0deg);
+}
+
 aside>ul>li>ul {
     /* overflow: hidden;
     height: 0;

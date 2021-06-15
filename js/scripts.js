@@ -15,8 +15,12 @@ $(document).ready(function() {
         var current_arrow = $(arrows[current_arrow_index]);
 
 
-        let angle = currentAngle(current_arrow) - 180;
-        current_arrow.css('transform', 'rotate(' + angle + 'deg)');
+        // let angle = currentAngle(current_arrow) - 180;
+        // current_arrow.css('transform', 'rotate(' + angle + 'deg)');
+
+        if (current_arrow.hasClass('open')) current_arrow.removeClass('open');
+        else current_arrow.addClass('open');
+
 
         $(submenus[current_arrow_index]).slideToggle('slow');
 
@@ -27,14 +31,14 @@ $(document).ready(function() {
     //------ A small function --------
 
 
-    function currentAngle(element) {
+    // function currentAngle(element) {
 
-        let transform = element.css('transform');
-        let values = transform.split('(')[1].split(')')[0].split(',');
-        let angle = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
+    //let transform = element.css('transform');
+    //let values = transform.split('(')[1].split(')')[0].split(',');
+    //let angle = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
 
-        return angle;
-    }
+    //return angle;
+    //}
 
     //----------------------- Clicking on sandwich button ---------------------------- 
 
