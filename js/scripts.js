@@ -43,10 +43,18 @@ $(document).ready(function() {
     //------------------------Checking the checkboxes------------------------------
 
 
+    let checkbox = $('.checkbox');
 
+    checkbox.click(function() {
+        let src = $(this).attr('src');
 
+        if (src == 'images/checkbox-blank.svg') {
+            $(this).attr('src', 'images/checkbox-checked.svg');
 
-    //    {}
+        } else {
+            $(this).attr('src', 'images/checkbox-blank.svg');
+        }
+    });
 
 
     //---------------------- Getting the current angle of the arrow -----------------
