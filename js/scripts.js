@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 
 
-    //------ A small function --------
+    //---------------------- Getting the current angle of the arrow -----------------
 
 
     // function currentAngle(element) {
