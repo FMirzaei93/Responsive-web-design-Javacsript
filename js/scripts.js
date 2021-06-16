@@ -3,11 +3,13 @@ $(document).ready(function() {
     //------------------------ Submenu transition ------------------------------------
 
 
-    let parents_of_submenus = $('aside > ul > li > div');
+    let titles_of_submenus = $('aside > ul > li > div');
     let arrows = $('aside > ul > li > div > span');
     let submenus = $('aside > ul > li > ul');
+    let parents = $('aside > ul > li');
 
-    parents_of_submenus.click(function(event) {
+
+    titles_of_submenus.click(function(event) {
 
         event.preventDefault();
 
@@ -16,20 +18,39 @@ $(document).ready(function() {
 
 
         // let angle = currentAngle(current_arrow) - 180;
-        // current_arrow.css('transform', 'rotate(' + angle + 'deg)');
-
-        if (current_arrow.hasClass('open')) current_arrow.removeClass('open');
-        else current_arrow.addClass('open');
+        // current_arrow.css('transform', 'rotate(' + angle + 'deg)');+
 
 
-        $(submenus[current_arrow_index]).slideToggle('slow');
+
+        // $(submenus[current_arrow_index]).slideToggle('slow');
+
+        var current_parent = $(this).parent();
+
+        parents.each(function(i, el) {
+            if (!$(el).is(current_parent))
+                $(el).removeClass('active');
+        });
+
+
+        if (current_parent.hasClass('active')) {
+
+            current_parent.removeClass('active');
+            current_arrow.removeClass('open')
+
+        } else {
+
+            current_parent.addClass('active');
+            current_arrow.addClass('open');
+        }
+
 
     });
 
 
+    //    {}
+
 
     //---------------------- Getting the current angle of the arrow -----------------
-
 
     // function currentAngle(element) {
 

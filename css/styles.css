@@ -280,20 +280,28 @@ aside>ul>li>div>span {
 }
 
 aside>ul>li>div>span.open {
-    transition: transform 0.3s;
     transform: rotate(0deg);
 }
 
+
+/* Submenu */
+
 aside>ul>li>ul {
-    /* overflow: hidden;
-    height: 0;
-    transition: height 0.5s; */
-    display: none;
+    overflow: hidden;
+    /* transition does't work on heught:auto. So I had to use max-height instead. */
+    max-height: 0;
+    transition: max-height .5s;
 }
 
 aside>ul>li.active>ul {
-    display: block;
+    max-height: 1000px;
+    /* someting greater than what it will ever get */
 }
+
+
+/* aside>ul>li.active>ul {
+    display: block;
+} */
 
 
 /* Media Query Classes */
