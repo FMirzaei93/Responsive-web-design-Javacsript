@@ -5,7 +5,6 @@ $(document).ready(function() {
 
     let titles_of_submenus = $('aside > ul > li > div');
     let arrows = $('aside > ul > li > div > span');
-    let submenus = $('aside > ul > li > ul');
     let parents = $('aside > ul > li');
 
 
@@ -15,11 +14,6 @@ $(document).ready(function() {
 
         let current_arrow_index = $(this).parent().index();
         var current_arrow = $(arrows[current_arrow_index]);
-
-
-        // let angle = currentAngle(current_arrow) - 180;
-        // current_arrow.css('transform', 'rotate(' + angle + 'deg)');+
-
 
 
         // $(submenus[current_arrow_index]).slideToggle('slow');
@@ -46,6 +40,11 @@ $(document).ready(function() {
 
     });
 
+    //------------------------Checking the checkboxes------------------------------
+
+
+
+
 
     //    {}
 
@@ -59,6 +58,11 @@ $(document).ready(function() {
     //let angle = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
 
     //return angle;
+
+    //usage:
+    // let angle = currentAngle(current_arrow) - 180;
+    // current_arrow.css('transform', 'rotate(' + angle + 'deg)');
+
     //}
 
     //----------------------- Clicking on sandwich button ---------------------------- 
